@@ -26,10 +26,11 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('contact/', views.contact, name='contact'),
     path('services/', views.services, name='services'),
-    path('portfolio/', views.portfolio, name='portfolio'),
     path('resume/', views.resume, name='resume'),
     path('starter_page/', views.starter_page, name='starter_page'),
-    path('portfolio-details/', views.portfolio_details, name='portfolio-details'),
+    path('portfolio/', views.portfolio, name='portfolio'),
+    path('portfolio/<int:id>/', views.portfolio_details, name='portfolio-details'),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
