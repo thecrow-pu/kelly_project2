@@ -65,7 +65,7 @@
         class="container-fluid position-relative d-flex align-items-center justify-content-between"
       >
         <a
-          href="{% url 'kelly_app:index' %}"
+          href="{% url 'index' %}"
           class="logo d-flex align-items-center me-auto me-xl-0"
         >
           <!-- Uncomment the line below if you also wish to use an image logo -->
@@ -75,13 +75,11 @@
 
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li>
-              <a href="{% url 'kelly_app:index' %}" class="active">Home</a>
-            </li>
-            <li><a href="{% url 'kelly_app:about' %}">About</a></li>
-            <li><a href="{% url 'kelly_app:resume' %}">Resume</a></li>
-            <li><a href="{% url 'kelly_app:services' %}">Services</a></li>
-            <li><a href="{% url 'kelly_app:portfolio' %}">Portfolio</a></li>
+            <li><a href="{% url 'index' %}" class="active">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'resume' %}">Resume</a></li>
+            <li><a href="{% url 'services' %}">Services</a></li>
+            <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
             <li class="dropdown">
               <a href="#"
                 ><span>Dropdown</span>
@@ -107,7 +105,7 @@
                 <li><a href="#">Dropdown 4</a></li>
               </ul>
             </li>
-            <li><a href="{% url 'kelly_app:contact' %}">Contact</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>

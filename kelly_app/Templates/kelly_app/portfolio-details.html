@@ -11,7 +11,7 @@
       </p>
     </div>
     <!-- End Section Title -->
-    {% if acc2 %}
+    {% if portfolio_item %}
     <div class="container" data-aos="fade-up" data-aos-delay="100">
       <div class="row gy-4">
         <div class="col-lg-8">
@@ -33,7 +33,7 @@
             </script>
             <div class="swiper-wrapper align-items-center">
               <div class="swiper-slide">
-                <img src="{{ acc2.image.url }}" alt="" />
+                <img src="{{ portfolio_item.image.url }}" alt="" />
               </div>
             </div>
             <div class="swiper-pagination"></div>
@@ -44,8 +44,8 @@
           <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
             <h3>Project information</h3>
             <ul>
-              <li><strong>Category</strong>: {{ acc2.title }}</li>
-              <li><strong>Client</strong>: {{acc2.description}}</li>
+              <li><strong>Category</strong>: {{ portfolio_item.title }}</li>
+              <li><strong>Client</strong>: {{ portfolio_item.description }}</li>
               <li><strong>Project date</strong>: 01 March, 2020</li>
               <li>
                 <strong>Project URL</strong>:

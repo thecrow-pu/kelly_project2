@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% load static %} {% block body_block %}
+<h1>Delete Shop</h1>
+
+{% if portfolio_delete %}
+<p>
+  Bạn có chắc chắn muốn xóa shop
+  <strong>{{ portfolio_delete.name }}</strong> không?
+</p>
+
+<form method="post">
+  {% csrf_token %}
+  <button type="submit" class="btn btn-danger">Yes, Delete</button>
+  <a href="{% url 'kelly_app:portfolio' %}" class="btn btn-secondary">Cancel</a>
+</form>
+{% else %}
+<p>Không tìm thấy shop này.</p>
+{% endif %}{% endblock %}
